@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppUNAC"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".docente_registronotas"
+            android:exported="false" />
+        <activity
+            android:name=".docente_ingles"
+            android:exported="false" />
+        <activity
+            android:name=".docente_curso"
+            android:exported="false" />
+        <activity
+            android:name=".admin_registrarnuevo"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_listausuario"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_listausuarios"
+            android:exported="false" />
+        <activity
+            android:name=".CursoLinks"
+            android:exported="false" />
+        <activity
+            android:name=".registronotas"
+            android:exported="false" />
+        <activity
+            android:name=".InglesBasico1"
+            android:exported="false" />
+        <activity
+            android:name=".Registroacademico_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".cursos_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".horarioacademico_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".Deudas_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".Matricula_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".menu_administrador"
+            android:exported="false" />
+        <activity
+            android:name=".menu_docente"
+            android:exported="false" />
+        <activity
+            android:name=".menuUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".registro"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
