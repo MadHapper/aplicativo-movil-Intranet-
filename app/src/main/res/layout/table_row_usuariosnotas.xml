@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:gravity="center|center_horizontal"
+    android:layout_marginTop="20dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="#CCFF00">
+        android:layout_marginVertical="20dp"
+        app:cardBackgroundColor="#FFCC1B">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/tabla1"
             android:padding="16dp">
 
             <TableRow
@@ -44,11 +44,28 @@
                     android:layout_height="wrap_content"
                     android:text="TextView"
                     android:layout_gravity="center"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/textApellidoM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Codigo:"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/textcod"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"
@@ -61,57 +78,72 @@
         </TableLayout>
 
         <TableLayout
-            android:layout_width="385dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="45dp"
-            android:padding="15dp">
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/black">
 
             <TableRow
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textpc1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="#CCFF00"
+                    android:gravity="center"
                     android:text=" Pract 1 "
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CCFF00"
-                    android:text=" Exa. Par"
+                    android:gravity="center"
+                    android:text=" Exa. Par "
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView55"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CCFF00"
+                    android:gravity="center"
                     android:text=" Pract 2 "
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView56"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CCFF00"
-                    android:text="  Exa. Final  "
+                    android:gravity="center"
+                    android:text=" Exa. Final "
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView57"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CCFF00"
+                    android:gravity="center"
                     android:text=" Promed "
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
@@ -125,16 +157,25 @@
                     android:id="@+id/textView58"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="#CCFF00"
                     android:text="TextView"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="1dp"
                     android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/textView59"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#CCFF00"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
                     android:text="TextView"
+                    android:gravity="center"
+                    android:background="@color/white"
                     android:textColor="#000000" />
 
                 <TextView
@@ -142,6 +183,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000" />
 
                 <TextView
@@ -149,6 +195,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000" />
 
                 <TextView
@@ -156,6 +207,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:textColor="#000000" />
             </TableRow>
 
@@ -163,4 +219,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</TableRow>

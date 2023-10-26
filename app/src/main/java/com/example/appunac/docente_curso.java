@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.SearchView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class docente_curso extends AppCompatActivity {
 
     TextView textViewUsuario;
     TableLayout tableLayoutCursos;
+    SearchView txtbuscar; // Agregamos la referencia al SearchView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,28 @@ public class docente_curso extends AppCompatActivity {
 
         textViewUsuario = findViewById(R.id.textView28);
         tableLayoutCursos = findViewById(R.id.tableLayout3);
+        txtbuscar = findViewById(R.id.txtbuscar); // Asignamos el SearchView
 
         String usuario = getIntent().getStringExtra("usuario");
         textViewUsuario.setText(usuario);
 
         String url = "https://www.productosjr.com/aplicativos/appunac/docentecursos.php?curso_docente=" + usuario;
         new ObtenerDatosAsyncTask().execute(url);
+
+        // Configuramos el listener para el SearchView
+        txtbuscar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Llama a la función para filtrar los resultados
+                filtrarCursos(newText);
+                return true;
+            }
+        });
     }
 
     private void mostrarCursos(JSONArray cursos) {
@@ -47,14 +65,17 @@ public class docente_curso extends AppCompatActivity {
                 JSONObject curso = cursos.getJSONObject(i);
                 String cursoId = curso.getString("curso_id");
                 String cursoNombre = curso.getString("curso_nombre");
+                String Fecha = curso.getString("curso_horario");
 
                 // Duplicar TableRow
                 TableRow tableRow = (TableRow) getLayoutInflater().inflate(R.layout.table_row_curso, null);
                 TextView textViewCursoc = tableRow.findViewById(R.id.codigocurso);
                 TextView textViewCurso = tableRow.findViewById(R.id.nombrecurso);
+                TextView textViewFecha = tableRow.findViewById(R.id.Fecha);
 
                 textViewCursoc.setText(cursoId);
                 textViewCurso.setText(cursoNombre);
+                textViewFecha.setText(Fecha);
 
                 // Agregar OnClickListener a TableRow
                 tableRow.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +91,6 @@ public class docente_curso extends AppCompatActivity {
                         intent.putExtra("usuario", usuario);
                         intent.putExtra("curso", curso);
                         intent.putExtra("cursoc", cursoc);
-
                         startActivity(intent);
                     }
                 });
@@ -79,6 +99,22 @@ public class docente_curso extends AppCompatActivity {
             }
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void filtrarCursos(String query) {
+        for (int i = 1; i < tableLayoutCursos.getChildCount(); i++) {
+            TableRow row = (TableRow) tableLayoutCursos.getChildAt(i);
+            TextView textNombreCurso = row.findViewById(R.id.nombrecurso);
+
+            // Comprueba si el texto de nombrecurso contiene la búsqueda
+            String nombreCurso = textNombreCurso.getText().toString();
+
+            if (nombreCurso.toLowerCase().contains(query.toLowerCase())) {
+                row.setVisibility(View.VISIBLE); // Muestra la fila si cumple con el criterio
+            } else {
+                row.setVisibility(View.GONE); // Oculta la fila si no cumple con el criterio
+            }
         }
     }
 

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!response.isEmpty()) {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
-                        int usuGrado = jsonObject.getInt("usu_grado");
+                        int usuGrado = jsonObject.getInt("usu_cargo");
                         Intent intent;
 
                         switch (usuGrado) {

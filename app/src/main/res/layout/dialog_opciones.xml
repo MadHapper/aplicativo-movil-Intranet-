@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSeleccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona una opción:"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:padding="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/radioAsistio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asistió" />
+
+        <RadioButton
+            android:id="@+id/radioFalto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faltó" />
+
+        <RadioButton
+            android:id="@+id/radioND"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/D (No Definido)" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Modificar" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Cancelar" />
+    </LinearLayout>
+</LinearLayout>

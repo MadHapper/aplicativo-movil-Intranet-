@@ -15,30 +15,28 @@ public class menu_administrador extends AppCompatActivity {
         setContentView(R.layout.activity_menu_administrador);
     }
 
-    public void abrirListacursos (View view) {
-        startActivity(new Intent(getApplicationContext(),Registroacademico_usuario.class));
-        finish();
-    }
-
-
-    public void abrirListausuarios (View view) {
-        startActivity(new Intent(getApplicationContext(),Admin_listausuario.class));
-        finish();
-    }
-
-    public void abrirListamatriculas (View view) {
-        startActivity(new Intent(getApplicationContext(),Registroacademico_usuario.class));
-        finish();
-    }
-
     public void abrirListapagosydeudas (View view) {
-        startActivity(new Intent(getApplicationContext(),Registroacademico_usuario.class));
-        finish();
+        Intent intent = new Intent(menu_administrador.this, admin_pagos.class);
+        startActivity(intent);
     }
 
-    public void abrirHorarioacademico (View view) {
-        startActivity(new Intent(getApplicationContext(),Registroacademico_usuario.class));
-        finish();
+    public void abrirregistroacedemico (View view) {
+        Intent intent = new Intent(menu_administrador.this, admin_registroacademico.class);
+        startActivity(intent);
     }
 
+    public void abrirusuarios (View view) {
+        Intent intent = new Intent(menu_administrador.this, Admin_listausuario.class);
+        startActivity(intent);
+    }
+
+    public void abrirtramites (View view) {
+        Intent intent = new Intent(menu_administrador.this, admin_tramites.class);
+        startActivity(intent);
+    }
+
+    public void abrirListacursos (View view) {
+        Intent intent = new Intent(menu_administrador.this, admin_listacursos.class);
+        startActivity(intent);
+    }
 }

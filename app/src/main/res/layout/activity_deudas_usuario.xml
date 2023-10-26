@@ -4,60 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Deudas_usuario">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logos" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/linkpagar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="40dp"
-        android:text="Pagar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#004AAC">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
 
-        android:text="Historial de Pagos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Deudas y Pagos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </TableRow>
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="257dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:text="MATRICULA INGLES I           s/10"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.018" />
+        </TableLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="253dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/deuda" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado de la Cuenta:"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:textSize="18dp"
+            android:textColor="#000000"/>
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_marginHorizontal="30dp"
+            app:srcCompat="@drawable/pagada" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historial de Pagos realizados"
+            android:textSize="18dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/codigopago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="1dp"
+            android:textColor="#FFFFFF"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/nombrepago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="1dp"
+            android:textColor="#FFFFFF"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirPagosHistorial"
+            android:backgroundTint="#004AAC"
+            android:text="Historial de pagos" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textView12"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/listPagos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

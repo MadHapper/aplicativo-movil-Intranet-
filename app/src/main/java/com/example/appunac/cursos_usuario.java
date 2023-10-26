@@ -44,6 +44,15 @@ public class cursos_usuario extends AppCompatActivity {
         textViewCursoc3 = findViewById(R.id.textView46);
 
 
+            findViewById(R.id.imageButton4).setVisibility(View.GONE);
+            findViewById(R.id.textView22).setVisibility(View.GONE);
+            findViewById(R.id.textView45).setVisibility(View.GONE);
+
+            findViewById(R.id.imageButton8).setVisibility(View.GONE);
+            findViewById(R.id.textView19).setVisibility(View.GONE);
+            findViewById(R.id.textView46).setVisibility(View.GONE);
+
+
         // Obtener cursos del usuario desde la base de datos
         obtenerCursos(usuario);
     }
@@ -242,7 +251,6 @@ public class cursos_usuario extends AppCompatActivity {
         intent.putExtra("usuario", usuario);
         intent.putExtra("cursoc", cursoc);
         startActivity(intent);
-        finish();
     }
 
     public void abrirInglesBasico2(View view) {
@@ -256,7 +264,6 @@ public class cursos_usuario extends AppCompatActivity {
         intent.putExtra("usuario", usuario);
         intent.putExtra("cursoc", cursoc);
         startActivity(intent);
-        finish();
     }
 
     public void abrirInglesBasico3(View view) {
@@ -269,17 +276,6 @@ public class cursos_usuario extends AppCompatActivity {
         intent.putExtra("usuario", usuario);
         intent.putExtra("cursoc", cursoc);
         startActivity(intent);
-        finish();
     }
 
-    public void onBackPressed() {
-        // Obtén el valor del TextView
-        String usuario = textViewUsuario.getText().toString();
-
-        // Crea un Intent y agrega el dato utilizando putExtra()
-        Intent intent = new Intent(cursos_usuario.this, menuUsuario.class);
-        intent.putExtra("usuario", usuario);
-        startActivity(intent);
-        finish();
-    }
 }

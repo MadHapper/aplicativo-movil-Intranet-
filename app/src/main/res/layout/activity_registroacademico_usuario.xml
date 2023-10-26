@@ -6,24 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Registroacademico_usuario">
 
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logos" />
+    <ProgressBar
+        android:id="@+id/login"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
 
     <WebView
-        android:id="@+id/webview"
-        android:layout_width="409dp"
-        android:layout_height="585dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        android:id="@+id/webview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/login"
+        />
 
 </RelativeLayout>

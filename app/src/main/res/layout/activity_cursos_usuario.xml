@@ -4,38 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".cursos_usuario">
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="144dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logos" />
 
     <TableLayout
         android:id="@+id/tableLayout3"
         android:layout_width="352dp"
         android:layout_height="372dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout7">
+
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="20dp"
 
-            <ImageButton
+            android:layout_marginTop="10dp"
+            android:background="#CFDDEF"
+            android:onClick="abrirInglesBasico1">
+
+            <ImageView
                 android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:onClick="abrirInglesBasico1"
                 app:srcCompat="@drawable/scorms" />
 
             <TableRow
@@ -49,14 +46,15 @@
                     android:layout_gravity="center"
                     android:layout_margin="12dp"
                     android:text="Ingles basico 1"
-                    android:textSize="32sp" />
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/textView44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TextView"
-                    android:textColor="#FEFEFE" />
+                    android:textColor="#CFDDEF" />
 
             </TableRow>
 
@@ -64,14 +62,15 @@
 
         <TableRow
             android:id="@+id/tableRow2"
+            android:onClick="abrirInglesBasico2"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="282dp">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:onClick="abrirInglesBasico2"
                 app:srcCompat="@drawable/scorms" />
 
             <TableRow
@@ -84,8 +83,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="12dp"
+                    android:textColor="#000000"
                     android:text="Ingles basico 1"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/textView45"
@@ -100,14 +100,15 @@
 
         <TableRow
             android:id="@+id/tableRow3"
+            android:onClick="abrirInglesBasico3"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:onClick="abrirInglesBasico3"
                 app:srcCompat="@drawable/scorms" />
 
             <TableRow
@@ -120,8 +121,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="12dp"
+                    android:textColor="#000000"
                     android:text="Ingles basico 1"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/textView46"
@@ -137,23 +139,27 @@
     </TableLayout>
 
     <TableLayout
-        android:layout_width="371dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/tableLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004AAC"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lista de Cursos"
-                android:textSize="20sp" />
+                android:layout_height="match_parent"
+                android:text="Lista de cursos"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -161,11 +167,11 @@
 
     <TextView
         android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
         android:layout_marginTop="28dp"
         android:text=""
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

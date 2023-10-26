@@ -114,19 +114,4 @@ public class registronotas extends AppCompatActivity {
         }
     }
 
-    public void onBackPressed() {
-        // Obtén el valor del TextView
-        String usuario = textViewUsuario.getText().toString();
-        String curso = textViewCurso.getText().toString();
-        String cursoc = textViewCursoc.getText().toString();
-
-        // Crea un Intent y agrega el dato utilizando putExtra()
-        Intent intent = new Intent(registronotas.this, InglesBasico1.class);
-        intent.putExtra("curso", curso);
-        intent.putExtra("usuario", usuario);
-        intent.putExtra("cursoc", cursoc);
-        startActivity(intent);
-        finish();
-    }
-
 }

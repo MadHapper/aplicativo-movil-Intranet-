@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".admin_ingles">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#004AAC">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Curso "
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="25dp"
+            android:onClick="abrirDocumentos"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/documentos" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Biblioteca"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirMeet"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/meet" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="VideoConferencia Meet"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirAsistencia"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/asistencia" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Lista de Asistencia"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirLinks"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/links" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Tareas"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirNotas"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/statistics" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Gestion de Registro de Notas"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirModificaciones"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/configuracion" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Configuracion de Curso"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TableLayout
+            android:layout_width="371dp"
+            android:layout_height="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="160dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="#FEFEFE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="#FEFEFE" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

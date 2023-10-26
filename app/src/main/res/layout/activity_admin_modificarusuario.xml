@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".admin_modificarusuario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#004AAC"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modificar Usuario"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/curso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre:"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_nombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="4"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido Paterno: "
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_apellidoP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:ems="4"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido Materno:"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_apellidoM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:ems="4"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Codigo: "
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_codigo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:ems="4"
+                        android:textSize="16sp"
+                        android:inputType="date"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correo: "
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_correo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:ems="4"
+                        android:textSize="16sp"
+                        android:inputType="textPersonName"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contraseña: "
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/usu_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:ems="4"
+                        android:textSize="16sp"
+                        android:inputType="textPassword"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grado: "
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:id="@+id/usu_grado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/AlumnoPre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alumno Pre-Grado"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/AlumnoPost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alumno Post-Grado"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/AlumnoGeneral"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alumno General"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/Correo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Usuario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                </TableRow>
+
+
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancelar"
+                    android:backgroundTint="#004AAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Cancelar"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"
+                    android:text="Cancelar" />
+
+                <Button
+                    android:id="@+id/modificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="modificar"
+                    android:backgroundTint="#004AAC"
+                    android:layout_weight="1"
+                    android:text="Modificar" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

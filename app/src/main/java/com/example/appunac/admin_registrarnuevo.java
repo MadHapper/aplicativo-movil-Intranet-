@@ -104,4 +104,8 @@ public class admin_registrarnuevo extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+
+    public void cancelarboton(View view) {
+        finish();
+    }
 }

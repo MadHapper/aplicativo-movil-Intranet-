@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".admin_modificarcurso">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#004AAC">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modificar curso "
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nombread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Curso"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Nombre del Curso: "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextnombrecurso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Docente encargado: "
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/listdocentes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Fecha y Hora: "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextfechayhora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:backgroundTint="#004AAC"
+                android:id="@+id/cancelarcurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cancelar"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+
+            <Button
+                android:backgroundTint="#004AAC"
+                android:id="@+id/crearcurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="Modificar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

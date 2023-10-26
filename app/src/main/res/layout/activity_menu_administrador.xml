@@ -4,130 +4,249 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".menu_administrador">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="144dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logos" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="27dp"
-        android:onClick="abrirListacursos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/scorms" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#004AAC">
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="abrirListapagosydeudas"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/gradebook" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="60dp"
-        android:onClick="abrirHorarioacademico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-        app:srcCompat="@drawable/agenda" />
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Menu Principal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </TableRow>
 
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="56dp"
-        android:onClick="abrirListausuarios"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:srcCompat="@drawable/members" />
+        </TableLayout>
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="27dp"
-        android:onClick="abrirListamatriculas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/course_progress" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Lista de cursos"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="25dp"
+            android:onClick="abrirListacursos"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Matricula"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton7"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Deudas y Pagos"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Horario Academico"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/scorms" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Lista de Usuarios"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton6"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="@+id/imageButton6"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Lista de Cursos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirListapagosydeudas"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/gradebook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Deudas y Pagos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirregistroacedemico"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Programacion Horaria"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>.
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirusuarios"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/members" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Lista de Usuarios"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="abrirtramites"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/notebook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="Lista de Tramites"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

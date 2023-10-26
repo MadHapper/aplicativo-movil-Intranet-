@@ -15,6 +15,69 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".admin_modificarusuario"
+            android:exported="false" />
+        <activity
+            android:name=".usuario_historialpagos"
+            android:exported="false" />
+        <activity
+            android:name=".docente_tareas"
+            android:exported="false" />
+        <activity
+            android:name=".docente_asistenciamodificar"
+            android:exported="false" />
+        <activity
+            android:name=".admin_tramites"
+            android:exported="false" />
+        <activity
+            android:name=".admin_pagos"
+            android:exported="false" />
+        <activity
+            android:name=".admin_registroacademico"
+            android:exported="false" />
+        <activity
+            android:name=".docente_asistencias_list"
+            android:exported="false" />
+        <activity
+            android:name=".docente_asistencia"
+            android:exported="false" />
+        <activity
+            android:name=".usuario_asistensia"
+            android:exported="false" />
+        <activity
+            android:name=".docente_biblioteca"
+            android:exported="false" />
+        <activity
+            android:name=".usuario_tramites"
+            android:exported="false" />
+        <activity
+            android:name=".MatriculaCurso_usuario"
+            android:exported="false" />
+        <activity
+            android:name=".usuario_pagar"
+            android:exported="false" />
+        <activity
+            android:name=".admin_modificarcurso"
+            android:exported="false" />
+        <activity
+            android:name=".admin_ingles"
+            android:exported="false" />
+        <activity
+            android:name=".admin_cursonuevo"
+            android:exported="false" />
+        <activity
+            android:name=".Docente_Meet"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_cuenta"
+            android:exported="false" />
+        <activity
+            android:name=".admin_listacursos"
+            android:exported="false" />
+        <activity
+            android:name=".docente_modificarnota"
+            android:exported="false" />
+        <activity
             android:name=".docente_registronotas"
             android:exported="false" />
         <activity

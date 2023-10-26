@@ -4,16 +4,246 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Matricula_usuario">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="410dp"
-        android:layout_height="144dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logos" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#004AAC">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Matricula"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp">
+
+            <TableLayout
+                android:id="@+id/tabla1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/iconouser" />
+
+                    <TextView
+                        android:id="@+id/textNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text="user"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textApellidoP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textApellidoM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="385dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                android:padding="15dp">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Correo: "
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Codigo: "
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView59"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/usu_grado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/PagoMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:onClick="abrirMatriculaPago"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/matri" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:text="Pago de Matricula"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/matricularCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:onClick="abrirMatriculaCurso"
+            app:cardBackgroundColor="#004AAC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/cursomatricula" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:textStyle="bold"
+                        android:text="Matricular curso"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

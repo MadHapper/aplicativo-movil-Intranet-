@@ -4,51 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="336dp"
-                android:layout_height="303dp"
+                android:layout_height="306dp"
                 android:layout_marginBottom="40dp"
                 app:srcCompat="@drawable/logo" />
 
             <EditText
                 android:id="@+id/edtUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="@android:color/darker_gray"
+                android:layout_width="360dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="#FEFEFE"
+                android:textColor="@color/black"
                 android:drawableLeft="@drawable/icon_email"
                 android:ems="10"
+                android:textColorHint="#555555"
                 android:hint="Correo"
+                android:textSize="20sp"
                 android:inputType="textPersonName"
                 android:paddingLeft="5dp" />
 
             <EditText
                 android:id="@+id/edtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="@android:color/darker_gray"
+                android:layout_width="360dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="#FEFEFE"
+                android:textColor="@color/black"
                 android:drawableLeft="@drawable/icon_lock"
                 android:ems="10"
+                android:textColorHint="#555555"
                 android:hint="Password"
+                android:textSize="20sp"
                 android:inputType="textPassword"
                 android:paddingLeft="5dp" />
 
@@ -59,23 +66,25 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
-                android:background="#1976d2"
+                android:backgroundTint="#FFCC1B"
+                android:padding="10dp"
                 android:text="Iniciar Sesión"
-                android:textColor="#FFF"
-                android:textSize="18sp" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
-                android:background="#1976d2"
+                android:padding="10dp"
+                android:backgroundTint="#FFCC1B"
                 android:onClick="abrirregistro"
                 android:text="Registro"
-                android:textColor="#FFF"
-                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 />
 
         </LinearLayout>

@@ -40,35 +40,55 @@ public class docente_ingles extends AppCompatActivity {
         intent.putExtra("usuario", usuario);
         intent.putExtra("cursoc", cursoc);
         startActivity(intent);
-        finish();
     }
 
-    public void abrirLinks (View view) {
-        startActivity(new Intent(getApplicationContext(),CursoLinks.class));
-        finish();
+    public void abrirAsistencia (View view) {
+        String usuario = textViewUsuario.getText().toString();
+        String curso = textViewCurso.getText().toString();
+        String cursoc = textViewCursoc.getText().toString();
+
+        Intent intent = new Intent(docente_ingles.this, docente_asistencia.class);
+        intent.putExtra("curso", curso);
+        intent.putExtra("usuario", usuario);
+        intent.putExtra("cursoc", cursoc);
+        startActivity(intent);
     }
 
     public void abrirDocumentos (View view){
 
-        String url = "https://drive.google.com/";
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        String usuario = textViewUsuario.getText().toString();
+        String curso = textViewCurso.getText().toString();
+        String cursoc = textViewCursoc.getText().toString();
+
+        Intent intent = new Intent(docente_ingles.this, docente_biblioteca.class);
+        intent.putExtra("curso", curso);
+        intent.putExtra("usuario", usuario);
+        intent.putExtra("cursoc", cursoc);
         startActivity(intent);
     }
 
     public void abrirMeet (View view){
-
-        String url = "https://meet.google.com/";
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(intent);
-    }
-    public void onBackPressed() {
-        // Obtén el valor del TextView
         String usuario = textViewUsuario.getText().toString();
+        String curso = textViewCurso.getText().toString();
+        String cursoc = textViewCursoc.getText().toString();
 
-        // Crea un Intent y agrega el dato utilizando putExtra()
-        Intent intent = new Intent(docente_ingles.this, menu_docente.class);
+        Intent intent = new Intent(docente_ingles.this, Docente_Meet.class);
+        intent.putExtra("curso", curso);
         intent.putExtra("usuario", usuario);
+        intent.putExtra("cursoc", cursoc);
         startActivity(intent);
-        finish();
     }
+
+    public void abrirTareas (View view){
+        String usuario = textViewUsuario.getText().toString();
+        String curso = textViewCurso.getText().toString();
+        String cursoc = textViewCursoc.getText().toString();
+
+        Intent intent = new Intent(docente_ingles.this, docente_tareas.class);
+        intent.putExtra("curso", curso);
+        intent.putExtra("usuario", usuario);
+        intent.putExtra("cursoc", cursoc);
+        startActivity(intent);
+    }
+
 }

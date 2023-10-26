@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewOpciones"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardBackgroundColor="#2580C3"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/CursoMatricular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2580C3"
+                    android:text=""
+                    android:layout_marginHorizontal="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/nombrecurso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Ingles basico 1"
+                        android:textColor="#000000"
+                        android:textColorHighlight="#FF0000"
+                        android:textColorHint="#FFFFFF"
+                        android:textColorLink="#FF0000"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Codigo de curso: "
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/codigocurso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:textColor="#000000" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha: "
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/Fecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:textColor="#000000" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</TableRow>
+

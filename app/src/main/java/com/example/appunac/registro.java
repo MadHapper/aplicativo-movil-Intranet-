@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,6 +34,9 @@ public class registro extends AppCompatActivity {
     private EditText edtContraseña;
     private Button btnRegistro;
 
+    private RadioGroup radioGroupCursos;
+    private TextView idgrado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,10 +50,31 @@ public class registro extends AppCompatActivity {
         edtContraseña = findViewById(R.id.edtContraseñaNew);
         btnRegistro = findViewById(R.id.btnregistro);
 
+        radioGroupCursos = findViewById(R.id.radioGroupCursos);
+        idgrado = findViewById(R.id.idgrado);
+
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registrarUsuario();
+            }
+        });
+
+        radioGroupCursos.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Verifica cuál RadioButton está seleccionado y actualiza el TextView
+                switch (checkedId) {
+                    case R.id.AlumnoPre:
+                        idgrado.setText("Alumno Pre-Grado");
+                        break;
+                    case R.id.AlumnoPost:
+                        idgrado.setText("Alumno Post-Grado");
+                        break;
+                    case R.id.AlumnoGeneral:
+                        idgrado.setText("Alumno General");
+                        break;
+                }
             }
         });
     }
@@ -59,9 +86,10 @@ public class registro extends AppCompatActivity {
         String codigo = edtCodigo.getText().toString().trim();
         String correo = edtCorreo.getText().toString().trim();
         String contraseña = edtContraseña.getText().toString().trim();
+        String Idgardo = idgrado.getText().toString();
 
         if (nombre.isEmpty() || apellidoPaterno.isEmpty() || apellidoMaterno.isEmpty() ||
-                codigo.isEmpty() || correo.isEmpty() || contraseña.isEmpty()) {
+                codigo.isEmpty() || correo.isEmpty() || contraseña.isEmpty() || Idgardo.isEmpty()) {
             Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -92,7 +120,8 @@ public class registro extends AppCompatActivity {
                 params.put("usu_codigo", codigo);
                 params.put("usu_correo", correo);
                 params.put("usu_password", contraseña);
-                params.put("usu_grado", "1");
+                params.put("usu_cargo", "1");
+                params.put("usu_grado", Idgardo);
 
                 return params;
             }
@@ -104,12 +133,6 @@ public class registro extends AppCompatActivity {
 
     public void abrirmainactivity (View view) {
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
-        finish();
-    }
-
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
         finish();
     }
 
